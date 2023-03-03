@@ -33,4 +33,4 @@ swap.addEventListener('click', () => {
   amountEl_two.value = amountTemp;
   calculate();
 })
-calculate()
+// calculate()
