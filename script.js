@@ -5,10 +5,13 @@ const amountEl_two = document.getElementById("amount-two");
 
 const rateEl = document.getElementById('rate')
 const swap = document.getElementById('swap')
+const clear = document.getElementById('clear')
 
 function calculate() {
   const currency_one = currencyEl_one.value;  
   const currency_two = currencyEl_two.value;  
+  const amountOneVal = amountEl_one.value;
+  const amountTwoVal = amountEl_two.value;
   fetch(`https://open.exchangerate-api.com/v6/latest/${currency_one}`).
     then(res => res.json())
     .then(data => {
@@ -17,13 +20,24 @@ function calculate() {
 
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
   })
-
+  if (amountOneVal || amountOneVal) {
+    clear.classList.add('show');
+  } else {
+    clear.classList.remove('show');
+  }
 }
 
 currencyEl_one.addEventListener('change', calculate)
 amountEl_one.addEventListener('input', calculate)
 currencyEl_two.addEventListener('change', calculate)
 amountEl_two.addEventListener('input', calculate)
+
+clear.addEventListener('click', function () {
+  amountEl_one.value = null;
+  amountEl_two.value = null;
+  clear.classList.remove('show');
+});
+
 swap.addEventListener('click', () => {
   const currencyTemp = currencyEl_one.value;
   const amountTemp = amountEl_one.value;

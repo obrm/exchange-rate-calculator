@@ -39,6 +39,18 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-transparent {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  min-width: 81px;
+  display: none;
+}
+
+.btn-transparent.show {
+  display: block;
+}
+
 .btn:hover {
   opacity: 0.8;
   color: #000;
