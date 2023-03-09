@@ -60,6 +60,10 @@ p {
   color: #000;
 }
 
+input[type="number"]:disabled {
+  color: #000;
+}
+
 .money-img {
   width: 150px;
 }
