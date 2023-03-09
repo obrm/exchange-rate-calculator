@@ -1,6 +1,9 @@
 ## Exchange Rate
 
-Select countries to get the exchange rate for a specific amount
+Select currencies to get the exchange rate for a specific amount
+
+## Site
+https://obrm-exchange-rate-calculator.netlify.app
 
 ## Project Specifications
 
