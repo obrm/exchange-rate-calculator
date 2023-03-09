@@ -28,6 +28,10 @@ p {
   text-align: center;  
 }
 
+.container {
+  min-height: 356px;
+}
+
 .btn {
   color: #fff;
   background-color: var(--primary-color);
